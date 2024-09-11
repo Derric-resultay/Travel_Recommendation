@@ -1,0 +1,43 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+}
+    .navFirst{
+        display: flex;
+    }
+    .navSecond ul{
+        display: flex;
+    }
+
+#home {
+    position: relative;
+    background-image: url(forHome.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+    #home::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+        pointer-events: none;
+    }
+    .homeText {
+        max-width: 56ch;
+    }
