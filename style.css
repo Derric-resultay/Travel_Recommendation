@@ -4,23 +4,44 @@
     box-sizing: content-box;
 }
 
-nav {
+header {
+    margin: 10px 4%;
     position: absolute;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    width: 92%;
+    gap: 5px;
     z-index: 1;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+header img{
+    flex: 0 0 50px;
+    max-width: 50px;
+    border-radius: 20px;
 }
     .navFirst{
         display: flex;
     }
     .navSecond ul{
         display: flex;
+        gap: 15px;
+        font-size: 22px;
     }
+        .navSecond ul li{
+            list-style-type: none;
+        }
+        .navSecond ul li a{
+            text-decoration: none;
+            color: black;
+        }
 
 #home {
     position: relative;
-    background-image: url(forHome.jpg);
+    background-image: url(./img/forHome.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -38,6 +59,37 @@ nav {
         background: radial-gradient(circle, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
         pointer-events: none;
     }
-    .homeText {
-        max-width: 56ch;
+    #home div {
+        margin-left: 100px;
     }
+        .homeTitle {
+            color: white;
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+        .glow-text {
+            font-size: 38px;
+            font-weight: bold;
+            color: white;
+            animation: glow-animation 1s infinite alternate;
+        }
+        
+        @keyframes glow-animation {
+            0% {
+                text-shadow: 0 0 5px #fffF00, 0 0 5px #ff0000, 0 0 15px #ff6200, 0 0 20px #ff0000;
+            }
+        
+            50% {
+                text-shadow: 0 0 10px #fffF00, 0 0 10px #ff0000, 0 0 30px #ff6200, 0 0 40px #ff0000;
+            }
+        
+            100% {
+                text-shadow: 0 0 5px #fffF00, 0 0 5px #ff0000, 0 0 15px #ff6200, 0 0 20px #ff0000;
+            }
+        }
+        .homeText {
+            max-width: 56ch;
+            font-size: 18px;
+            color: white;
+            margin-bottom: 10px;
+        }
